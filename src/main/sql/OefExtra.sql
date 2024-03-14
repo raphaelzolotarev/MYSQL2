@@ -41,7 +41,8 @@ JOIN brewers
     ON beers.brewerid = brewers.id
 JOIN categories
      ON beers.categoryid = categories.id
-WHERE category IN('Alcoholarm', 'Alcoholvrij')
+GROUP BY brewers.name, categories.category
+HAVING category IN('Alcoholarm', 'Alcoholvrij')
 ORDER BY brewer_name;
 
 
