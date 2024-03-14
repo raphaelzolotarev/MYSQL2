@@ -27,4 +27,5 @@ GROUP BY brewerid;
 SELECT categoryid, MAX(beers.price) as max_price
 FROM beers
 WHERE beers.price>3
+AND beers.stock>0
 GROUP BY categoryid;
