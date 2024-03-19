@@ -29,8 +29,6 @@ GROUP BY categories.category, beers.id
 ORDER BY max_alcohol DESC
 limit 4;
 
-
-
 SELECT beers.Id, beers.Name, brewers.Name AS BrewerName, categories.Category AS CategoryName
 FROM beers
          INNER JOIN brewers  ON beers.BrewerId = brewers.Id
